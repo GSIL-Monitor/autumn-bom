@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.autumn</groupId>
+    <artifactId>autumn-bom</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <autumn-utils.version>0.0.1-SNAPSHOT</autumn-utils.version>
+        <autumn-web.version>0.0.1-SNAPSHOT</autumn-web.version>
+        <autumn-web-test.version>0.0.1-SNAPSHOT</autumn-web-test.version>
+    </properties>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.autumn</groupId>
+                <artifactId>autumn-utils</artifactId>
+                <version>${autumn-utils.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.autumn</groupId>
+                <artifactId>autumn-web</artifactId>
+                <version>${autumn-web.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.autumn</groupId>
+                <artifactId>autumn-web-test</artifactId>
+                <version>${autumn-web-test.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
