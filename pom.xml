@@ -12,7 +12,8 @@
     <properties>
         <autumn-utils.version>0.0.1-SNAPSHOT</autumn-utils.version>
         <autumn-web.version>0.0.1-SNAPSHOT</autumn-web.version>
-        <autumn-web-test.version>0.0.1-SNAPSHOT</autumn-web-test.version>
+        <autumn-mybatis.version>0.0.1-SNAPSHOT</autumn-mybatis.version>
+        <autumn-workflow.version>0.0.1-SNAPSHOT</autumn-workflow.version>
     </properties>
 
 
@@ -30,9 +31,32 @@
             </dependency>
             <dependency>
                 <groupId>org.autumn</groupId>
-                <artifactId>autumn-web-test</artifactId>
-                <version>${autumn-web-test.version}</version>
+                <artifactId>autumn-mybatis</artifactId>
+                <version>${autumn-mybatis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.autumn</groupId>
+                <artifactId>autumn-workflow</artifactId>
+                <version>${autumn-workflow.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>rdm_releases</id>
+            <url>http://maven.oa.com/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>rdm_snapshots</id>
+            <url>http://maven.oa.com/nexus/content/repositories/thirdparty-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <modules>
+        <module>../autumn-utils</module>
+        <module>../autumn-web</module>
+        <module>../autumn-mybatis</module>
+        <module>../autumn-workflow</module>
+    </modules>
 </project>
